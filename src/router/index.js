@@ -11,6 +11,8 @@ import mqttRouter from '@/router/modules/mqtt'
 import taskRouter from '@/router/modules/task'
 import dashboardRouter from '@/router/modules/bashboard'
 import i18n from '../../i18n/i18n'
+import authRouter from '@/router/modules/auth'
+import goodsRouter from "@/router/modules/goods";
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -65,6 +67,10 @@ export const constantRoutes = [
   resourceRouter,
 
   mqttRouter,
+
+  authRouter,
+
+  goodsRouter,
 
   taskRouter,
 

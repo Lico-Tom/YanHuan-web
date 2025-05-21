@@ -18,7 +18,7 @@ const userRouter = {
     },
     {
       path: '/list',
-      component: () => import('@/views/user/index'),
+      component: () => import('@/views/auth/user/index'),
       name: 'list',
       meta: {
         title: i18n.t('user.list')
