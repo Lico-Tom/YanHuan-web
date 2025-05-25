@@ -8,16 +8,20 @@ const taskRouter = {
   name: 'task',
   meta: {
     title: i18n.t('common.task'),
-    icon: 'el-icon-tickets'
+    icon: 'task-management'
   },
   children: [
     {
       path: '/task',
       component: () => import('@/views/task/index'),
       name: 'task',
-      meta: {
-        title: i18n.t('task.tasks')
-      }
+      meta: {title: i18n.t('task.tasks'), icon: 'createtask'}
+    },
+    {
+      path: '/task',
+      component: () => import('@/views/task/index'),
+      name: 'task',
+      meta: {title: i18n.t('task.tasks'), icon: 'createtask'}
     }
   ]
 }

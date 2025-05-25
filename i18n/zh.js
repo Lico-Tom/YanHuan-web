@@ -28,6 +28,20 @@ export default {
     sub: '订阅',
     history: '历史'
   },
+  auth: {
+    auth: '权限',
+    userList: '用户列表',
+    roleList: '角色列表',
+    resourceList: '资源列表',
+    menuList: '菜单列表'
+  },
+  goods: {
+    goods: '商品管理',
+    goodsList: '商品列表',
+    goodsAdd:  '添加商品',
+    goodsCategory: '商品分类',
+    brandManagement: '品牌管理'
+  },
   task: {
     tasks: '任务列表'
   }

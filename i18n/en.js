@@ -18,9 +18,23 @@ export default {
   },
   mqtt: {
     mqtts: 'MQTTs',
-    pub: 'Pub',
-    sub: 'Sub',
+    pub: 'Publish',
+    sub: 'Subscribe',
     history: 'History'
+  },
+  auth: {
+    auth: 'Auth',
+    userList: 'Users',
+    roleList: 'Roles',
+    resourceList: 'Resources',
+    menuList: 'Menus'
+  },
+  goods: {
+    goods: 'Produce',
+    goodsList: 'Produces',
+    goodsAdd:  'Add Produce',
+    goodsCategory: 'Goods Category',
+    brandManagement: 'Brand Management'
   },
   task: {
     tasks: 'Tasks'

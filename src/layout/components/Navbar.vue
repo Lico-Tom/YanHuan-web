@@ -5,25 +5,39 @@
     <breadcrumb class="breadcrumb-container" />
 
     <div class="right-menu">
-      <el-dropdown class="avatar-container" trigger="click">
-        <div class="avatar-wrapper">
-          <img src="@/assets/profile.png" class="user-avatar" alt="profile">
-          <i class="el-icon-caret-bottom" />
-        </div>
-        <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <router-link to="/">
-            <el-dropdown-item>
-              Home
+      <el-menu mode="horizontal">
+        <el-menu-item index="1">
+          <el-input
+            size="small"
+            style="width: 100px;margin-bottom: 50px"
+            prefix-icon="el-icon-search"
+            v-model="input2">
+          </el-input>
+        </el-menu-item>
+        <el-submenu index="2">
+          <template slot="title">我的工作台</template>
+          <el-menu-item index="2-1">选项1</el-menu-item>
+          <el-menu-item index="2-2">选项2</el-menu-item>
+          <el-menu-item index="2-3">选项3</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3" @click.native="changeLanguage">中文/EN</el-menu-item>
+        <el-dropdown class="avatar-container" trigger="click">
+          <div class="avatar-wrapper">
+            <img src="@/assets/profile.png" class="user-avatar" alt="profile">
+            <i class="el-icon-caret-bottom" />
+          </div>
+          <el-dropdown-menu slot="dropdown" class="user-dropdown">
+            <router-link to="/">
+              <el-dropdown-item>
+                用户信息
+              </el-dropdown-item>
+            </router-link>
+            <el-dropdown-item divided @click.native="logout">
+              <span style="display:block;">Log Out</span>
             </el-dropdown-item>
-          </router-link>
-          <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">Log Out</span>
-          </el-dropdown-item>
-          <el-dropdown-item divided @click.native="changeLanguage">
-            <span style="display:block;">中英文切换</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
-      </el-dropdown>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </el-menu>
     </div>
   </div>
 </template>
@@ -57,6 +71,7 @@ export default {
       const language = currentLanguage === 'zh' ? 'en' : 'zh'
       this.$i18n.locale = language
       localStorage.setItem('language', language)
+      window.location.reload()
     }
   }
 }
@@ -115,7 +130,7 @@ export default {
     }
 
     .avatar-container {
-      margin-right: 30px;
+      margin-right: 20px;
 
       .avatar-wrapper {
         margin-top: 5px;

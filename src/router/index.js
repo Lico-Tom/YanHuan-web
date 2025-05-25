@@ -5,8 +5,6 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
-import userRouter from '@/router/modules/user'
-import resourceRouter from '@/router/modules/resource'
 import mqttRouter from '@/router/modules/mqtt'
 import taskRouter from '@/router/modules/task'
 import dashboardRouter from '@/router/modules/bashboard'
@@ -40,12 +38,6 @@ import goodsRouter from "@/router/modules/goods";
  */
 export const constantRoutes = [
   {
-    path: '/login',
-    component: () => import('@/views/login/index'),
-    hidden: true
-  },
-
-  {
     path: '/404',
     component: () => import('@/views/404'),
     hidden: true
@@ -62,17 +54,13 @@ export const constantRoutes = [
       meta: { title: i18n.t('common.home'), icon: 'el-icon-s-home' }
     }]
   },
-  userRouter,
-
-  resourceRouter,
-
   mqttRouter,
-
-  authRouter,
 
   goodsRouter,
 
   taskRouter,
+
+  authRouter,
 
   dashboardRouter,
 
