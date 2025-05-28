@@ -12,16 +12,16 @@ const taskRouter = {
   },
   children: [
     {
-      path: '/task',
+      path: '/tasks',
       component: () => import('@/views/task/index'),
-      name: 'task',
+      name: 'tasks',
       meta: {title: i18n.t('task.tasks'), icon: 'createtask'}
     },
     {
-      path: '/task',
+      path: '/task-log',
       component: () => import('@/views/task/index'),
-      name: 'task',
-      meta: {title: i18n.t('task.tasks'), icon: 'createtask'}
+      name: 'task-log',
+      meta: {title: i18n.t('task.taskLog'), icon: 'tasklog'}
     }
   ]
 }

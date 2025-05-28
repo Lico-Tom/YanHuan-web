@@ -43,7 +43,8 @@ export default {
     brandManagement: '品牌管理'
   },
   task: {
-    tasks: '任务列表'
+    tasks: '任务列表',
+    taskLog: '执行任务历史'
   }
 
 }

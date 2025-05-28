@@ -13,9 +13,9 @@ const mqttRouter = {
   },
   children: [
     {
-      path: '/mqtt',
+      path: '/mqtt/list',
       component: () => import('@/views/mqtt/index'),
-      name: 'mqtt',
+      name: 'list',
       meta: {title: i18n.t('mqtt.mqtts'), icon: 'mqtt'}
     },
     {

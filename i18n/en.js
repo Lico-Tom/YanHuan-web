@@ -37,7 +37,8 @@ export default {
     brandManagement: 'Brand Management'
   },
   task: {
-    tasks: 'Tasks'
+    tasks: 'Tasks',
+    taskLog: 'Task List'
   },
   login: {
     title: 'Login Form',
